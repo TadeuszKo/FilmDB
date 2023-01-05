@@ -9,7 +9,7 @@ namespace FilmDB.Controllers
 {
     public class FilmController : Controller
     {
-        //FilmManager filmManager = new FilmManager();
+        FilmManager manager = new FilmManager();
         public IActionResult Index()
         {
             //var random = new Random();
@@ -21,7 +21,7 @@ namespace FilmDB.Controllers
             //filmManager.AddFilm(film);
 
             //dodawanie nowego filmu dobazy danych
-            var manager = new FilmManager();
+            //var manager = new FilmManager();
             manager.AddFilm(new FilmModel()
             {
                 ID = 0,
@@ -49,6 +49,19 @@ namespace FilmDB.Controllers
 
                 return View();
                 
+
+        }
+        [HttpGet]
+        public IActionResult Add() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(FilmModel filmModel) 
+        {
+            manager.AddFilm(filmModel);
+            return RedirectToAction("Index");
 
         }
     }

@@ -60,6 +60,7 @@ namespace FilmDB.Logic
                     zmianaTitle.Title = newTitle;
 
                 UpdateFilm(zmianaTitle);
+                context.SaveChanges();
 
 
 
@@ -78,14 +79,23 @@ namespace FilmDB.Logic
             return this;
         }
 
-        public FilmManager GetFilm(int id)
+        public FilmModel GetFilm(int id)
         {
-            return null;
+            using (var context = new FilmContext()) 
+            {
+                var jedenGetFilm = context.Films.Single(x => x.ID == id);
+                return jedenGetFilm;
+
+            }
         }
 
         public List<FilmModel> GetFilms()
         {
-            return null;
+            using (var context = new FilmContext())
+            {
+                var listaGetFilms=context.Films.ToList();
+                return listaGetFilms;
+            }
         }
     }
 }
