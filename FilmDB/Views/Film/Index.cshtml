@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Add">Dodaj film</a>
+    <a asp-action="Add" class="btn btn-primary">Dodaj film</a>
 </p>
 <table class="table">
     <thead>
@@ -31,9 +31,9 @@
                 @Html.DisplayFor(modelItem => item.Year)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Edit" asp-route-id="@item.ID" calass=" btn btn-primary">Edit</a> |
                 @*<a asp-action="Details" asp-route-id="@item.ID">Details</a> |*@
-                <a asp-action="Remove" asp-route-id="@item.ID">Remove</a>
+                <a asp-action="Remove" asp-route-id="@item.ID" class=" btn btn-outline-danger">Remove</a>
             </td>
         </tr>
 }

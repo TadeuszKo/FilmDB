@@ -1,6 +1,7 @@
 ﻿using FilmDB.Logic;
 using FilmDB.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewComponents;
 using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -79,6 +80,20 @@ namespace FilmDB.Controllers
         public IActionResult RemoveConfirm(int id)
         {
             filmManager.RemoveFilm(id);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var film = filmManager.GetFilm(id);
+            return View(film);
+        }
+
+        [HttpPost]
+        public IActionResult Edit (FilmModel film)
+        {
+            filmManager.UpdateFilm(film);
             return RedirectToAction("Index");
         }
     }
