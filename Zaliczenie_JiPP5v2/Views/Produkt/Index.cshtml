@@ -4,10 +4,10 @@
     ViewData["Title"] = "Lista wszsytkich zasobow";
 }
 
-<h1>Index</h1>
+<h1>Lista wszystkich zasobów</h1>
 
 <p>
-    <a asp-action="Add">Dodaj nowy produkt</a>
+    <a asp-action="Add" class="btn btn-primary">Dodaj nowy produkt</a>
 </p>
 <table class="table">
     <thead>
@@ -55,8 +55,8 @@
                 @Html.DisplayFor(modelItem => item.LOKALIZACJA)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
-                    <a asp-action="Remove" asp-route-id="@item.ID">Usuń</a>
+                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-success">Edytuj</a> |
+                    <a asp-action="Remove" asp-route-id="@item.ID" class="btn btn-danger">Usuń</a>
             </td>
         </tr>
 }
