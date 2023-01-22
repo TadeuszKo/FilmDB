@@ -1,0 +1,9 @@
+Wzorzec projektowy Kompozyt (Composite pattern) pozwala na tworzenie zagnieżdżonych drzew struktur danych. W .NET Core może być stosowany do tworzenia hierarchii obiektów, takich jak drzewo katalogów w systemie plików lub drzewo kontrolki w aplikacji GUI.
+
+Wzorzec projektowy Obserwator (Observer pattern) pozwala na subskrypcję i reakcję na zmiany stanu obiektu. W .NET Core może być stosowany do implementacji systemów push, takich jak powiadomienia o nowych wiadomościach lub aktualizacjach danych.
+
+Wzorzec projektowy Strategia (Strategy pattern) umożliwia dynamiczne zmiany algorytmów lub strategii działania. W .NET Core może być stosowany do implementacji różnych strategii sortowania, kompresji czy szyfrowania danych.
+
+Wzorzec projektowy Metoda Wytwórcza (Factory Method pattern) pozwala na tworzenie obiektów za pomocą interfejsu lub klasy abstrakcyjnej, a nie konkretnej klasy. W .NET Core może być stosowany do implementacji różnych metod tworzenia obiektów, takich jak tworzenie obiektów z pliku lub bazy danych.
+
+Wzorzec projektowy Dekorator (Decorator pattern) pozwala na dynamiczne dodawanie nowych funkcjonalności do istniejących obiektów. W .NET Core może być stosowany do implementacji rozszerzenia funkcjonalności obiektów, takich jak dodawanie logowania do metod lub kompresji danych przed wysłaniem do sieci.
