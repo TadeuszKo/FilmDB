@@ -1,0 +1,59 @@
+﻿@model Zaliczenie_JiPP5v2.Models.ProduktModel
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+
+<h4>ProduktModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="KATEGORIA" class="control-label"></label>
+                <input asp-for="KATEGORIA" class="form-control" />
+                <span asp-validation-for="KATEGORIA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NAZWA" class="control-label"></label>
+                <input asp-for="NAZWA" class="form-control" />
+                <span asp-validation-for="NAZWA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ILOSC" class="control-label"></label>
+                <input asp-for="ILOSC" class="form-control" />
+                <span asp-validation-for="ILOSC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JEDNOSTKA" class="control-label"></label>
+                <input asp-for="JEDNOSTKA" class="form-control"/>
+                
+                <span asp-validation-for="JEDNOSTKA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DATA_KUPNA" class="control-label"></label>
+                <input asp-for="DATA_KUPNA" class="form-control" />
+                <span asp-validation-for="DATA_KUPNA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LOKALIZACJA" class="control-label"></label>
+                <input asp-for="LOKALIZACJA" class="form-control" />
+                <span asp-validation-for="LOKALIZACJA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

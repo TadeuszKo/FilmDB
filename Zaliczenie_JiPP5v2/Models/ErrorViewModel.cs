@@ -1,6 +1,6 @@
 using System;
 
-namespace ZAL_JiPP5_LAB.Models
+namespace Zaliczenie_JiPP5v2.Models
 {
     public class ErrorViewModel
     {

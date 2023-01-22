@@ -1,0 +1,63 @@
+﻿@model Zaliczenie_JiPP5v2.Models.ProduktModel
+
+@{
+    ViewData["Title"] = "UsuwaniePotwierdzenie";
+}
+
+<h1>UsuwaniePotwierdzenie</h1>
+
+<div>
+    <h4>ProduktModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KATEGORIA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KATEGORIA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NAZWA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NAZWA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ILOSC)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ILOSC)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JEDNOSTKA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JEDNOSTKA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DATA_KUPNA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DATA_KUPNA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LOKALIZACJA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LOKALIZACJA)
+        </dd>
+    </dl>
+</div>
+<div>
+
+    <form asp-action="RemoveConfirm" method="post">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Potwierdzam usunięcie" class="btn btn-danger" />
+    </form>
+    @*<a asp-action="RemoveConfirm" asp-route-id="@Model.ID">Potwierdź Usunięcie</a> |*@
+    <a asp-action="Index">Powrót do strony głównej</a>
+
+
+    @*   <a asp-action="RemoveConfirm" asp-route-id="@Model.ID">Potwierdź usunięcie</a> |
+    <a asp-action="Index">Powrót do strony głównej</a>*@
+</div>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Zaliczenie_JiPP5v2.Models.ProduktModel>
+
+@{
+    ViewData["Title"] = "Lista wszsytkich zasobow";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Add">Dodaj nowy produkt</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KATEGORIA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NAZWA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ILOSC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JEDNOSTKA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DATA_KUPNA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LOKALIZACJA)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KATEGORIA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NAZWA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ILOSC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JEDNOSTKA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DATA_KUPNA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LOKALIZACJA)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edytuj</a> |
+                    <a asp-action="Remove" asp-route-id="@item.ID">Usuń</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

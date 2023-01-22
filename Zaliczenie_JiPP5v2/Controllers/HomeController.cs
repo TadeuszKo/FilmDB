@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using ZAL_JiPP5_LAB.Models;
+using Zaliczenie_JiPP5v2.Models;
 
-namespace ZAL_JiPP5_LAB.Controllers
+namespace Zaliczenie_JiPP5v2.Controllers
 {
     public class HomeController : Controller
     {

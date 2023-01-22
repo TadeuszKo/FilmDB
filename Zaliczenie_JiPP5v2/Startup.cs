@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ZAL_JiPP5_LAB
+namespace Zaliczenie_JiPP5v2
 {
     public class Startup
     {

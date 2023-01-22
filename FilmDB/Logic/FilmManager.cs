@@ -49,35 +49,35 @@ namespace FilmDB.Logic
             return this;
         }
 
-        public FilmManager ChangeTitle(int id, string newTitle)
-        {
-            using (var context = new FilmContext()) 
-            {
-                var zmianaTitle = context.Films.Single(x => x.ID == id);
-                if (string.IsNullOrEmpty(newTitle))
-                    zmianaTitle.Title = "Brak Tytułu";
-                else
-                    zmianaTitle.Title = newTitle;
+        //public FilmManager ChangeTitle(int id, string newTitle)
+        //{
+        //    using (var context = new FilmContext()) 
+        //    {
+        //        var zmianaTitle = context.Films.Single(x => x.ID == id);
+        //        if (string.IsNullOrEmpty(newTitle))
+        //            zmianaTitle.Title = "Brak Tytułu";
+        //        else
+        //            zmianaTitle.Title = newTitle;
 
-                UpdateFilm(zmianaTitle);
-                context.SaveChanges();
+        //        UpdateFilm(zmianaTitle);
+        //        context.SaveChanges();
 
 
 
                 
-                //try
-                //{
-                //    zmianaTitle.Title = newTitle;
-                //}
-                //catch (System.Exception)
-                //{
-                //    zmianaTitle.Title = "Brak Tytułu";
-                //}
-                //UpdateFilm(zmianaTitle);
+        //        //try
+        //        //{
+        //        //    zmianaTitle.Title = newTitle;
+        //        //}
+        //        //catch (System.Exception)
+        //        //{
+        //        //    zmianaTitle.Title = "Brak Tytułu";
+        //        //}
+        //        //UpdateFilm(zmianaTitle);
                 
-            }
-            return this;
-        }
+        //    }
+        //    return this;
+        //}
 
         public FilmModel GetFilm(int id)
         {
